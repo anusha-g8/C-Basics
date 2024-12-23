@@ -1,8 +1,9 @@
 //
 //  main.cpp
 //  c++ Basics
+//
 //  Created by Anusha Ghali on 23/12/24.
-//  Program to add or remove fruits from the Inventory using maps.
+//
 
 #include <iostream>
 #include <string>
@@ -55,6 +56,7 @@ void FruitInv::removeFruitFromInv(std::string fruitName, size_t noOfFruits)
             it->second -= noOfFruits;
             fruitExsit = true;
         }
+        it++;
     }
     if (fruitExsit == false)
     {
@@ -75,12 +77,25 @@ void FruitInv::displayAllFruits()
 int main(int argc, const char * argv[]) {
     
     FruitInv f1;
+    
+    // Display default fruits
+    std::cout << "Display default fruits" << std::endl;
+    f1.displayAllFruits();
+    
     f1.addFruittoInv("Orange", 10);
     f1.addFruittoInv("Apple", 10);
     f1.addFruittoInv("Kiwi", 10);
     f1.addFruittoInv("Banana", 10);
     
+    // Display after adding the fruits
+    std::cout << "Display after adding the fruits" << std::endl;
+    f1.displayAllFruits();
+    
+    f1.removeFruitFromInv("Banana", 5);
+    f1.removeFruitFromInv("Apple", 5);
+    f1.removeFruitFromInv("Car", 5);
+    //Display after Removing the fruits
+    std::cout << "Display after adding the fruits" << std::endl;
     f1.displayAllFruits();
     return 0;
 }
-  
