@@ -1,7 +1,7 @@
 //
 //  main.cpp
 //  c++ Basics
-//
+//  Sample program to demostate encapsulation.
 //  Created by Anusha Ghali on 23/12/24.
 //
 
